@@ -63,3 +63,16 @@ def test
    yield 2
 end
 test {|i| puts "You are in the block #{i}"}
+
+$LOAD_PATH << '.'
+
+require 'trig.rb'
+require 'moral'
+
+y = Trig.sin(Trig::PI/4)
+wrongdoing = Moral.sin(Moral::VERY_BAD)
+puts y, wrongdoing
+
+
+a = gets
+puts a
